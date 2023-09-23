@@ -1,39 +1,91 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+# myGeographicQuiz
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+My Geographic Quiz is a small and quick quiz which hopes to demonstrate how Javascript works in a context. The quiz is easy to understand and use. The user
+will test your geographic knowledge on which question that they go through and may learn something. My Geographic Quiz is a responsive Javascript quiz and we
+can add some more questions in the future.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![photo of responsive screens]
 
-## Codeanywhere Reminders
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### Existing Features
 
-`python3 -m http.server`
+- __Create an username and feedback area__
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+  - This section will allow the user to create an username and leave a feedback for any improvement.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+![uname]
 
-`http_server`
+- __My Geographic Quiz Heading__
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  - Featured at the top of the page, My Geographic Quiz heading is easy to see for any user. The user will be able to see the name of the quiz.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Heading]
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- __The Game Area__
 
-To log into the Heroku toolbelt CLI:
+  - This section will allow the user to start the quiz. The user will be able to easily see the number of the question and the multiple answers.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Game]
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- __The Score Area at the end__
 
----
+  - This section will allow the user to see exactly how many correct and incorrect answers they have got.
 
-Happy coding!
+![score]
+
+### Features left to implement
+
+- When there is time, I would like to include few more geographic questions.
+
+### Testing
+
+- I tested playing this quiz in different browsers: Chrome, Firefix and Microsoft Edge.
+
+- The results of this game are always correct.
+
+- I confirm that the colors and fonts are easy to read and understand.
+
+![lighthouse]
+
+### bugs
+
+- Solved bugs
+
+  - I discovered this because I had try to access an undefined variable
+
+    “uncaught typeerror: cannot read property”
+
+### Validator Testing
+
+- HTML
+
+  - Two errors were found when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fguiiilhermee.github.io%2FmyGeographicQuiz%2F)
+
+- CSS
+
+  - No errors were found when passing through the official [W3C CSS Validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fguiiilhermee.github.io%2FmyGeographicQuiz%2F&usermedium=all&vextwarning=&warning=1)
+
+- JavaScript
+
+  - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+    - The following metrics were returned:
+    - There are 22 functions in this file.
+    - Function with the largest signature takes 2 arguments, while the median is 0.
+    - Function with the largest signature take 2 arguments, while the median is 1.
+    - The most complex function has a cyclomatic complexity value of 2 while the median is 1.
+
+### Unfixed Bugs
+
+No unfixed bugs
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Main Branch
+  - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - <https://guiiilhermee.github.io/myGeographicQuiz/>
