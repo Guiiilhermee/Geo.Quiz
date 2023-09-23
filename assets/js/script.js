@@ -48,7 +48,7 @@ const questionData = [
             { text: 'Bergen', correct: false }
         ]
     },
-]
+];
 
 const questionFunctions = {
     init() {
@@ -150,3 +150,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 
 });
+
+
+function questions(numberOfQuestion, id) {
+    document.querySelector('.quiz__total').style.display = 'none';
+
+    const page = numberOfQuestion + 1;
+    const verifyNumberPage = document.querySelectorAll('.quiz__question');
+
+    if (verifyNumberPage.length === 1) {
+        verifyNumberPage.forEach(q => {
+            if (q.dataset.question_number === id) {
+                quizContainer.removeChild(q);
+            }
+        });
+    }
+
+    setTimeout(() => {
+        questionData.slice(numberOfQuestion, page).map((qs) => {
+            const container = document.createElement('div');
+            container.setAttribute('class', 'quiz__question');
+
+            const html = `
+        <h1 class="quiz__title">My Geographic Quiz</h1>
+  
+        <span class="quiz__question__declaration">
+          ${page} - ${qs.question}
+        </span>
+      
+        <form id="form-quiz">
+          ${qs.answers.map(q => {
+                return (
+                    `
+              <div class="quiz__wrapper" data-id="question-${q.text}">
+                <input 
+                type="checkbox" 
+                name="${q.text}" 
+                id="question-${q.text}" 
+                value="${q.text}"
+                class="quiz__input"
+                >
+                <label for="question-${q.text}" class="quiz__question__response">${q.text}</label>
+                <div class="checked"></div>
+              </div>
+              `
+                );
+            }).join(' ')}
+      
+          <div class="quiz__button-container">
+            <button 
+              type="submit" 
+              class="quiz__submit" 
+              data-question="${page}"
+              id="question-${page}"
+              disabled="true"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      `;
+
+            container.innerHTML = html;
+
+            quizContainer.appendChild(container);
+        });
+    }, 100);
+}
