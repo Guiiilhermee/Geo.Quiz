@@ -89,7 +89,7 @@ const questionFunctions = {
 
         total.innerHTML = html;
 
-        const returnButton = document.querySelector('.quiz__total-return');
+        const returnButton = total.querySelector('.quiz__total-return');
         returnButton.addEventListener('click', returnQuestions);
     },
 
@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setTimeout(() => {
-        questionFunctions.form();
         questionFunctions.response();
     }, 100);
 
@@ -214,6 +213,8 @@ function questions(numberOfQuestion, id) {
             container.innerHTML = html;
 
             quizContainer.appendChild(container);
+
+            questionFunctions.form();
         });
     }, 100);
 }
