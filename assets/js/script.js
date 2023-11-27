@@ -24,7 +24,7 @@ const questionData = [
         question: 'What is the capital of Australia?',
         answers: [
             { text: 'Sydney', correct: false },
-            { text: 'Camberra', correct: true },
+            { text: 'Canberra', correct: true },
             { text: 'Perth', correct: false },
             { text: 'Melbourne', correct: false }
         ]
